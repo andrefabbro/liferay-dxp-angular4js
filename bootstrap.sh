@@ -32,12 +32,6 @@ init_bundle() {
 	# create the deploy folder
 	mkdir -p bundles/deploy
 	
-	# Removes the old version of LCS plugin
-	rm -rf ./bundles/osgi/marketplace/Liferay\ Connected\ Services\ Client.lpkg
-	
-	# Copy the new version of Liferay Connected Service
-	cp ~/.liferay/plugins/Liferay\ Connected\ Services\ Client.lpkg bundles/deploy
-	
 	# Copy a valid license
 	cp ~/.liferay/activation/*.xml bundles/deploy
 	
