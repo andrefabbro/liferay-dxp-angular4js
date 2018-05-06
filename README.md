@@ -61,7 +61,7 @@ npm install
 blade deploy
 ```
 
-Then, access your http://localhost:8080, user: test@liferay.com, password: test
+Then, access your http://localhost:8080, user: test, password: test
 
 ## Create a new Angular Portlet
 
