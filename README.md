@@ -58,3 +58,5 @@ After the server start, you can deploy the modules:
 ```
 blade deploy
 ```
+
+Then, access your http://localhost:8080, user: test@liferay.com, password: test
