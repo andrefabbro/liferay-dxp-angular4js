@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
 	`
 })
 export class AppComponent {
-	caption = 'Hello world!';
+	caption = 'Hello world from Angular!!!!';
 }
