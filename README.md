@@ -6,6 +6,7 @@
 * Blade Tools (https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-0/installing-blade-cli)
 * NodeJS (https://nodejs.org/)
 * NPM (https://www.npmjs.com/get-npm)
+* Docker (https://www.docker.com/)
 
 ## Install
 
@@ -35,3 +36,7 @@ cp liferay-fix-pack-de-45-7010.zip ~/.liferay/fix-packs/
 mkdir -p ~/.liferay/activation/
 cp activation-key-development.xml ~/.liferay/activation/
 ```
+
+## Setup the Bundle
+
+Execute the setup.sh script which contains two funcions: init, 
