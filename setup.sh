@@ -11,7 +11,7 @@ init_db() {
 	echo "=============================="
 	docker stop dxpangular || true
 	docker rm dxpangular || true
-	docker run --name dxpangular -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=dxpangular --publish 3306:3306 -d mysql --character-set-server=utf8 --collation-server=utf8_general_ci
+	docker run --name dxpangular -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=intranet --publish 3306:3306 -d mysql:5.6 --character-set-server=utf8 --collation-server=utf8_general_ci
 }
 
 ##
@@ -50,12 +50,30 @@ deploy() {
 
 ## Init Bundle Environment
 init() {
-	init_db
-	init_bundle
+  init_db
+  init_bundle
 }
 
 build_package() {
-	init_bundle
+  init_bundle
+}
+
+setup_intranet_demo() {
+  echo "=============================="
+  echo "Install plugins"
+  echo "=============================="
+  
+  ## Restore the Document Library
+  cp -R ~/.liferay/intranet-sales-demo/document_library bundles/data/
+
+  ## Install plugins
+  cp ~/.liferay/intranet-sales-demo/marketplace/*.lpkg bundles/deploy/
+
+  ## Install modules
+  cp ~/.liferay/intranet-sales-demo/modules/*.jar bundles/deploy/
+
+  ## Install Themes and Layout Templates
+  cp ~/.liferay/intranet-sales-demo/war/*.war bundles/deploy/
 }
 
 case "${COMMAND}" in
@@ -68,8 +86,11 @@ case "${COMMAND}" in
   deploy ) deploy
 	    exit 0
 	    ;;
+  demo ) setup_intranet_demo
+	    exit 0
+	    ;;
   *)
-    echo $"Usage: $0 {init, package, deploy}"
+    echo $"Usage: $0 {init, package, deploy, demo}"
       exit 1
 esac
 exit 0
