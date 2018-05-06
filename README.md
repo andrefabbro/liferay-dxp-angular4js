@@ -12,27 +12,27 @@
 
 * Create a folder named .liferay into you home folder if it doesn't exists:
 
-```
+```bash
 mkdir -p ~/.liferay
 ```
 
 * Copy the file liferay-dxp-digital-enterprise-tomcat-7.0-sp7-20180307180151313.zip to ~/.liferay/bundles/
 
-```
+```bash
 mkdir -p ~/.liferay/bundles/
 cp liferay-dxp-digital-enterprise-tomcat-7.0-sp7-20180307180151313.zip ~/.liferay/bundles/
 ```
 
 * Copy the file liferay-fix-pack-de-45-7010.zip to ~/.liferay/fix-packs/
 
-```
+```bash
 mkdir -p ~/.liferay/fix-packs/
 cp liferay-fix-pack-de-45-7010.zip ~/.liferay/fix-packs/
 ```
 
 * Copy the file activation-key-development.xml (your license file) to ~/.liferay/activation/
 
-```
+```bash
 mkdir -p ~/.liferay/activation/
 cp activation-key-development.xml ~/.liferay/activation/
 ```
@@ -41,7 +41,7 @@ cp activation-key-development.xml ~/.liferay/activation/
 
 Execute:
 
-```
+```bash
 ./setup.sh init
 ```
 
@@ -49,13 +49,15 @@ It should create a docker container with mysql database, and setup your liferay 
 
 Then, start the server:
 
-```
+```bash
 blade server start
 ```
 
 After the server start, you can deploy the modules:
 
-```
+```bash
+cd modules/poc-angular-hello-world/
+npm install
 blade deploy
 ```
 

@@ -1,0 +1,5 @@
+Bundle-Name: poc-angular-hello-world
+Bundle-SymbolicName: com.liferay.angular.poc
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.angular.poc.constants
+Web-ContextPath: /poc-angular-hello-world
