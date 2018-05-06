@@ -53,7 +53,7 @@ Then, start the server:
 blade server start
 ```
 
-After the server start, you can deploy the modules:
+After the server start, you can deploy the angular example portlet in modules folder:
 
 ```bash
 cd modules/poc-angular-hello-world/
@@ -62,3 +62,19 @@ blade deploy
 ```
 
 Then, access your http://localhost:8080, user: test@liferay.com, password: test
+
+## Create a new Angular Portlet
+
+You can create a new Angular portlet like following:
+
+```bash
+blade create -t npm-angular-portlet -p com.myportlet -c MyAngular my-angular-portlet
+```
+
+Then deploy:
+
+```bash
+cd modules/my-angular-portlet/
+npm install
+blade deploy
+```
