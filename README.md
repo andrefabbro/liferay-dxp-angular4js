@@ -78,3 +78,34 @@ cd modules/my-angular-portlet/
 npm install
 blade deploy
 ```
+
+## Edit your portlet
+
+Open the portal in http://localhost:8080 and drag your new portlet into any page, you'll see the Hello World message. Then edit the caption property from the Angular component in the file modules/my-angular-portlet/src/main/resources/META-INF/resources/js/app/app.component.ts
+
+```bash
+vi modules/my-angular-portlet/src/main/resources/META-INF/resources/js/app/app.component.ts
+```
+
+```javascript
+import { Component } from '@angular/core';
+
+@Component({
+	template: `
+		<div>{{caption}}</div>
+	`
+})
+export class AppComponent {
+
+    caption = 'My New Message from Angular!';
+    
+}
+```
+
+Save the file and deploy again:
+
+```bash
+blade deploy
+```
+
+Go to the page where contains your portlet, you'll see the new message.
