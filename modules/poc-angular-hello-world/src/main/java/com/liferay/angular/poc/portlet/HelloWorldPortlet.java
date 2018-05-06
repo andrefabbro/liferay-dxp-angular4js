@@ -16,7 +16,7 @@ import org.osgi.service.component.annotations.Component;
 	property = {
 		"com.liferay.portlet.display-category=category.sample",
 		"com.liferay.portlet.instanceable=true",
-		"javax.portlet.display-name=poc-angular-hello-world Portlet",
+		"javax.portlet.display-name=Angular Hello World Portlet",
 		"javax.portlet.init-param.template-path=/",
 		"javax.portlet.init-param.view-template=/view.jsp",
 		"javax.portlet.name=" + HelloWorldPortletKeys.HelloWorld,
