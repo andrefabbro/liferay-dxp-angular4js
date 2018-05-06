@@ -26,7 +26,7 @@
 			auth="Container"
 			type="javax.sql.DataSource"
 			driverClassName="com.mysql.jdbc.Driver"
-			url="jdbc:mysql://localhost:3306/dxpangular?useUnicode=true&amp;characterEncoding=UTF-8"
+			url="jdbc:mysql://localhost:3306/intranet?useUnicode=true&amp;characterEncoding=UTF-8"
 			username="root"
 			password="root"
 			maxActive="100"
