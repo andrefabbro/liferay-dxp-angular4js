@@ -1,5 +1,12 @@
 # Liferay DXP + Angular 4
 
+## Pre-requisites
+
+* JDK 8 (http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html)
+* Blade Tools (https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-0/installing-blade-cli)
+* NodeJS (https://nodejs.org/)
+* NPM (https://www.npmjs.com/get-npm)
+
 ## Install
 
 * Create a folder named .liferay into you home folder if it doesn't exists:

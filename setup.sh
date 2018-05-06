@@ -52,7 +52,6 @@ deploy() {
 init() {
 	init_db
 	init_bundle
-	deploy
 }
 
 build_package() {
@@ -66,8 +65,11 @@ case "${COMMAND}" in
   package ) build_package
 	    exit 0
 	    ;;
+  deploy ) deploy
+	    exit 0
+	    ;;
   *)
-    echo $"Usage: $0 {init, package}"
+    echo $"Usage: $0 {init, package, deploy}"
       exit 1
 esac
 exit 0
