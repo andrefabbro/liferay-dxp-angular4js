@@ -109,3 +109,31 @@ blade deploy
 ```
 
 Go to the page where contains your portlet, you'll see the new message.
+
+## Install Cool Themes and Site Templates
+
+1. Start the instance:
+
+```bash
+blade server start
+```
+
+2. Go to Server Administration and *Reindex all search indexes*.
+
+3. Copy the plugins into ~/.liferay/intranet-sales-demo/marketplace/
+
+4. Copy the jars into ~/.liferay/intranet-sales-demo/modules/
+
+5. Copy the WAR's files into ~/.liferay/intranet-sales-demo/war/
+
+6. Copy the document_library folder into ~/.liferay/intranet-sales-demo/
+
+7. Execute the script again with the demo function:
+
+```bash
+./setup.sh demo
+```
+
+8. Wait deploy all new plugins and go to Control Panel > Sites, create one site based on any of the new cool Site Templates.
+
+9. Enjoy
