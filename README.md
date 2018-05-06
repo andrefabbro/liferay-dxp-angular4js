@@ -39,4 +39,22 @@ cp activation-key-development.xml ~/.liferay/activation/
 
 ## Setup the Bundle
 
-Execute the setup.sh script which contains two funcions: init, 
+Execute:
+
+```
+./setup.sh init
+```
+
+It should create a docker container with mysql database, and setup your liferay bundle pointing to this database.
+
+Then, start the server:
+
+```
+blade server start
+```
+
+After the server start, you can deploy the modules:
+
+```
+blade deploy
+```
